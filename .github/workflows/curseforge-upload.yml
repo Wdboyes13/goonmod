@@ -20,4 +20,4 @@ jobs:
         run: npm install -g curseforge-release
 
       - name: Upload to CurseForge
-        run: curseforge-release --api-key ${{ secrets.CURSEFORGE_API_KEY }} --project-id YOUR_PROJECT_ID --file "path/to/your/mod.jar" --changelog "changelog.txt" --game-version "1.20.1" --release-type "release"
+        run: curseforge-release --api-key ${{ secrets.CURSEFORGE_API_KEY }} --project-id 1225110 --file "releases/curr/gsm.jar" --changelog "changelog.txt" --game-version "1.20.1" --release-type "release"
