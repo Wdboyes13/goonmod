@@ -13,18 +13,15 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v2
 
-    - name: Set up JDK 17 (if using Java-based mod)
-      uses: actions/setup-java@v2
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4.7.0
       with:
-        java-version: 17
-        java-package: jdk
-        architecture: x64
-        distribution: 'adoptopenjdk'  # This specifies the distribution
-        check-latest: false
-        server-id: github
-        server-username: GITHUB_ACTOR
-        server-password: GITHUB_TOKEN
-        overwrite-settings: true
+        java-version: 17  # Specify the version of Java (17 in your case)
+        distribution: 'adoptopenjdk'  # Specify the distribution, e.g., AdoptOpenJDK or zulu
+        java-package: 'jdk'  # You can specify 'jdk' to get the full JDK package, or 'jre' if you want just the JRE
+        architecture: 'x64'  # Specify the architecture, default is x64
+        check-latest: true  # Optionally, check for the latest available version if you want
+
 
     - name: Build the mod
       run: |
