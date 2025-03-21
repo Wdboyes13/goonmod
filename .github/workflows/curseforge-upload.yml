@@ -1,32 +1,22 @@
-name: Upload to CurseForge
+name: Upload Mod to CurseForge on Release Publish
 
 on:
   release:
-    types: [published]
-  workflow_dispatch:
+    types:
+      - published  # Triggered when a release is published
 
 jobs:
   upload:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout the code
+      uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install dependencies
-        run: npm install axios form-data
-
-      - name: Get release version
-        id: get_version
-        run: echo "VERSION=$(echo ${GITHUB_REF#refs/tags/})" >> $GITHUB_ENV
-
-      - name: Run CurseForge Upload Script
-        run: node upload-script.js
-        env:
-          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-          VERSION: ${{ env.VERSION }}
-
+    - name: Upload the mod to CurseForge
+      run: |
+        curl -L -v -X POST \
+          -H "X-Api-Token: ${{ secrets.CURSEFORGE_API_TOKEN }}" \  # Use GitHub Secrets for API token
+          -F "metadata={\"changelog\":\"${{ github.event.release.body }}\",\"changelogType\":\"markdown\",\"displayName\":\"${{ github.event.release.name }}\",\"releaseType\":\"alpha\",\"gameVersions\":[157, 158],\"isMarkedForManualRelease\":true}" \
+          -F "file=@releases/curr/gsm.jar" \  # Adjust this path according to where your mod is
+          http://www.curseforge.com/api/projects/1225110/upload-file
