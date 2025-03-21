@@ -1,0 +1,39 @@
+name: Build and Store Mod in Release Generation
+
+on:
+  push:
+    tags:
+      - '*.*.*'  # Triggered by tags like v1.0.0, v1.1.0, etc.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 17 (if using Java-based mod)
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+
+    - name: Build the mod
+      run: |
+        # Assuming you are using a build tool like Gradle or Maven
+        # Replace with the actual build command for your project
+        ./gradlew build  # Replace this with your build command if different
+        echo "Mod built"
+
+    - name: Store the mod in releases/curr/gsm.jar
+      run: |
+        # Ensure the build artifact is placed in the correct directory
+        mkdir -p releases/curr
+        cp build/libs/your-mod.jar releases/curr/gsm.jar  # Modify based on where your mod is output
+
+    - name: Create a GitHub release
+      run: |
+        # Creates a GitHub release with the tag and adds the mod file to it
+        git tag -a v1.0.0 -m "Your release message"  # Replace with the correct tag
+        git push origin v1.0.0  # Pushes the tag to GitHub
+        gh release create v1.0.0 releases/curr/gsm.jar  # Creates a release with the mod file
