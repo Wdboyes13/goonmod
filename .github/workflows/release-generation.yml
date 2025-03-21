@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-java@v4.7.0
       with:
         java-version: 17  # Specify the version of Java (17 in your case)
-        distribution: 'adoptopenjdk'  # Specify the distribution, e.g., AdoptOpenJDK or zulu
+        distribution: 'adoptium'  # Specify the distribution, e.g., AdoptOpenJDK or zulu
         java-package: 'jdk'  # You can specify 'jdk' to get the full JDK package, or 'jre' if you want just the JRE
         architecture: 'x64'  # Specify the architecture, default is x64
         check-latest: true  # Optionally, check for the latest available version if you want
