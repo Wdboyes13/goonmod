@@ -1,0 +1,23 @@
+name: Upload to CurseForge
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install CurseForgeUploader
+        run: npm install -g curseforge-release
+
+      - name: Upload to CurseForge
+        run: curseforge-release --api-key ${{ secrets.CURSEFORGE_API_KEY }} --project-id YOUR_PROJECT_ID --file "path/to/your/mod.jar" --changelog "changelog.txt" --game-version "1.20.1" --release-type "release"
