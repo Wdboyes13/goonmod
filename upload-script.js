@@ -12,14 +12,14 @@ if (!apiKey || !version) {
 }
 
 const form = new FormData();
-form.append('file', fs.createReadStream('path/to/your/mod.jar'));  // Path to your mod file
+form.append('file', fs.createReadStream('releases/curr/gsm.jar'));  // Path to your mod file
 form.append('fileName', 'mod.jar');  // Your file name
 form.append('gameId', '432');  // Minecraft's gameId (432 for Minecraft)
 form.append('version', version);  // Use the version number from the release tag
 form.append('changelog', 'Initial release');  // Changelog text
 
 // Make the request to CurseForge API
-axios.post('https://api.curseforge.com/v1/mods/upload', form, {
+axios.post('https://api.curseforge.com/v1/mods/1225110/upload', form, {
   headers: {
     ...form.getHeaders(),
     'x-api-key': apiKey,  // Use the API key from environment variables
