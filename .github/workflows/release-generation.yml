@@ -16,7 +16,15 @@ jobs:
     - name: Set up JDK 17 (if using Java-based mod)
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: 17
+        java-package: jdk
+        architecture: x64
+        distribution: 'adoptopenjdk'  # This specifies the distribution
+        check-latest: false
+        server-id: github
+        server-username: GITHUB_ACTOR
+        server-password: GITHUB_TOKEN
+        overwrite-settings: true
 
     - name: Build the mod
       run: |
