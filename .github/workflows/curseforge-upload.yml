@@ -3,6 +3,7 @@ name: Upload to CurseForge
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   upload:
@@ -14,10 +15,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '16'
 
-      - name: Install CurseForgeUploader (cfuploader)
-        run: npm install -g cfuploader
+      - name: Install dependencies
+        run: npm install axios form-data
 
-      - name: Upload to CurseForge
-        run: cfuploader --api-key ${{ secrets.CURSEFORGE_API_KEY }} --project-id 1225110 --file "releases/curr/gsm.jar" --changelog "changelog.txt" --release-type "release"
+      - name: Get release version
+        id: get_version
+        run: echo "VERSION=$(echo ${GITHUB_REF#refs/tags/})" >> $GITHUB_ENV
+
+      - name: Run CurseForge Upload Script
+        run: node upload-script.js
+        env:
+          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          VERSION: ${{ env.VERSION }}
+

@@ -140,17 +140,7 @@ Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/g
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/beforeDestroyingBlock(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V from net/minecraft/world/level/material/FlowingFluid/beforeDestroyingBlock(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V: beforeDestroyingBlock -> m_7456_
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/getBucket()Lnet/minecraft/world/item/Item; from net/minecraft/world/level/material/Fluid/getBucket()Lnet/minecraft/world/item/Item;: getBucket -> m_6859_
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/canBeReplacedWith(Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/Direction;)Z from net/minecraft/world/level/material/Fluid/canBeReplacedWith(Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/Direction;)Z: canBeReplacedWith -> m_5486_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid/getDripParticle()Lnet/minecraft/core/particles/ParticleOptions; from net/minecraft/world/level/material/Fluid/getDripParticle()Lnet/minecraft/core/particles/ParticleOptions;: getDripParticle -> m_7792_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid$Flowing/getAmount(Lnet/minecraft/world/level/material/FluidState;)I from net/minecraft/world/level/material/FlowingFluid/getAmount(Lnet/minecraft/world/level/material/FluidState;)I: getAmount -> m_7430_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid$Flowing/createFluidStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/material/FlowingFluid/createFluidStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createFluidStateDefinition -> m_7180_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid$Flowing/isSource(Lnet/minecraft/world/level/material/FluidState;)Z from net/minecraft/world/level/material/Fluid/isSource(Lnet/minecraft/world/level/material/FluidState;)Z: isSource -> m_7444_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid$Source/getAmount(Lnet/minecraft/world/level/material/FluidState;)I from net/minecraft/world/level/material/FlowingFluid/getAmount(Lnet/minecraft/world/level/material/FluidState;)I: getAmount -> m_7430_
-Conflicting propagated mapping for net/mcreator/gs/fluid/GoonsauceFluid$Source/isSource(Lnet/minecraft/world/level/material/FluidState;)Z from net/minecraft/world/level/material/Fluid/isSource(Lnet/minecraft/world/level/material/FluidState;)Z: isSource -> m_7444_
 Conflicting propagated mapping for net/minecraftforge/event/BuildCreativeModeTabContentsEvent/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V from net/minecraft/world/item/CreativeModeTab$Output/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V: accept -> m_246267_
-Conflicting propagated mapping for net/mcreator/gs/item/MillppItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
-Conflicting propagated mapping for net/mcreator/gs/item/ExecprogItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
-Conflicting propagated mapping for net/mcreator/gs/item/ThreeseeItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
-Conflicting propagated mapping for net/mcreator/gs/item/GoonsauceItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Adding extras
 Sorting
 Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
@@ -158,42 +148,47 @@ Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
   META-INF/MANIFEST.MF
   META-INF/mods.toml
   assets/
-  assets/gs/
-  assets/gs/blockstates/
-  assets/gs/blockstates/goonsauce.json
-  assets/gs/lang/
-  assets/gs/lang/en_us.json
-  assets/gs/models/
-  assets/gs/models/block/
-  assets/gs/models/block/goonsauce.json
-  assets/gs/models/item/
-  assets/gs/models/item/execprog.json
-  assets/gs/models/item/goonsauce_bucket.json
-  assets/gs/models/item/millpp.json
-  assets/gs/models/item/threesee.json
-  assets/gs/sounds.json
-  assets/gs/sounds/
-  assets/gs/sounds/spotidownloader.com_-__3c_-_kyotsugyon.ogg
-  assets/gs/sounds/spotidownloader.com_-__execution_program.wav_-_lusumi.ogg
-  assets/gs/sounds/spotidownloader.com_-_m1lli0n_pp_-_camellia.ogg
-  assets/gs/textures/
-  assets/gs/textures/block/
-  assets/gs/textures/block/goonsaucebucket.png
-  assets/gs/textures/block/gsflow.png
-  assets/gs/textures/block/gsstill.png
-  assets/gs/textures/gtflag.png
-  assets/gs/textures/item/
-  assets/gs/textures/item/execprog.png
-  assets/gs/textures/item/gsbucket.png
-  assets/gs/textures/item/gtflag.png
-  assets/gs/textures/item/milpp.png
-  assets/gs/textures/item/threesee.png
-  assets/gs/textures/painting/
-  assets/gs/textures/painting/gtflag.png
+  assets/gm/
+  assets/gm/blockstates/
+  assets/gm/blockstates/goonsauce.json
+  assets/gm/lang/
+  assets/gm/lang/en_us.json
+  assets/gm/models/
+  assets/gm/models/block/
+  assets/gm/models/block/goonsauce.json
+  assets/gm/models/custom/
+  assets/gm/models/custom/execprog.mod.json
+  assets/gm/models/item/
+  assets/gm/models/item/execprog.json
+  assets/gm/models/item/goonsauce_bucket.json
+  assets/gm/models/item/millcad.json
+  assets/gm/models/item/millpp.json
+  assets/gm/models/item/threesee.json
+  assets/gm/sounds.json
+  assets/gm/sounds/
+  assets/gm/sounds/spotidownloader.com_-__3c_-_kyotsugyon.ogg
+  assets/gm/sounds/spotidownloader.com_-__execution_program.wav_-_lusumi.ogg
+  assets/gm/sounds/spotidownloader.com_-_m1lli0n_pp_-_camellia.ogg
+  assets/gm/textures/
+  assets/gm/textures/block/
+  assets/gm/textures/block/goonsaucebucket.png
+  assets/gm/textures/block/gsflow.png
+  assets/gm/textures/block/gsstill.png
+  assets/gm/textures/gtflag.png
+  assets/gm/textures/item/
+  assets/gm/textures/item/execprog.png
+  assets/gm/textures/item/gsbucket.png
+  assets/gm/textures/item/gtflag.png
+  assets/gm/textures/item/milcad.png
+  assets/gm/textures/item/milpp.png
+  assets/gm/textures/item/threesee.png
+  assets/gm/textures/painting/
+  assets/gm/textures/painting/gtflag.png
   data/
-  data/gs/
-  data/gs/recipes/
-  data/gs/recipes/gsrec.json
+  data/gm/
+  data/gm/recipes/
+  data/gm/recipes/gsrec.json
+  data/gm/recipes/millcadrec.json
   data/minecraft/
   data/minecraft/tags/
   data/minecraft/tags/items/
@@ -202,29 +197,30 @@ Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
   data/minecraft/tags/painting_variant/placeable.json
   net/
   net/mcreator/
-  net/mcreator/gs/
-  net/mcreator/gs/GsMod.class
-  net/mcreator/gs/block/
-  net/mcreator/gs/block/GoonsauceBlock.class
-  net/mcreator/gs/fluid/
-  net/mcreator/gs/fluid/GoonsauceFluid$Flowing.class
-  net/mcreator/gs/fluid/GoonsauceFluid$Source.class
-  net/mcreator/gs/fluid/GoonsauceFluid.class
-  net/mcreator/gs/fluid/types/
-  net/mcreator/gs/fluid/types/GoonsauceFluidType$1.class
-  net/mcreator/gs/fluid/types/GoonsauceFluidType.class
-  net/mcreator/gs/init/
-  net/mcreator/gs/init/GsModBlocks.class
-  net/mcreator/gs/init/GsModFluidTypes.class
-  net/mcreator/gs/init/GsModFluids$ClientSideHandler.class
-  net/mcreator/gs/init/GsModFluids.class
-  net/mcreator/gs/init/GsModItems.class
-  net/mcreator/gs/init/GsModPaintings.class
-  net/mcreator/gs/init/GsModSounds.class
-  net/mcreator/gs/init/GsModTabs.class
-  net/mcreator/gs/item/
-  net/mcreator/gs/item/ExecprogItem.class
-  net/mcreator/gs/item/GoonsauceItem.class
-  net/mcreator/gs/item/MillppItem.class
-  net/mcreator/gs/item/ThreeseeItem.class
+  net/mcreator/gm/
+  net/mcreator/gm/GmMod.class
+  net/mcreator/gm/block/
+  net/mcreator/gm/block/GoonsauceBlock.class
+  net/mcreator/gm/fluid/
+  net/mcreator/gm/fluid/GoonsauceFluid$Flowing.class
+  net/mcreator/gm/fluid/GoonsauceFluid$Source.class
+  net/mcreator/gm/fluid/GoonsauceFluid.class
+  net/mcreator/gm/fluid/types/
+  net/mcreator/gm/fluid/types/GoonsauceFluidType$1.class
+  net/mcreator/gm/fluid/types/GoonsauceFluidType.class
+  net/mcreator/gm/init/
+  net/mcreator/gm/init/GmModBlocks.class
+  net/mcreator/gm/init/GmModFluidTypes.class
+  net/mcreator/gm/init/GmModFluids$ClientSideHandler.class
+  net/mcreator/gm/init/GmModFluids.class
+  net/mcreator/gm/init/GmModItems.class
+  net/mcreator/gm/init/GmModPaintings.class
+  net/mcreator/gm/init/GmModSounds.class
+  net/mcreator/gm/init/GmModTabs.class
+  net/mcreator/gm/item/
+  net/mcreator/gm/item/ExecprogItem.class
+  net/mcreator/gm/item/GoonsauceItem.class
+  net/mcreator/gm/item/MillcadItem.class
+  net/mcreator/gm/item/MillppItem.class
+  net/mcreator/gm/item/ThreeseeItem.class
   pack.mcmeta

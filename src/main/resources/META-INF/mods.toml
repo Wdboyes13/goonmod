@@ -3,14 +3,15 @@ loaderVersion="[47,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="gs"
+modId="gm"
 version="1.0.0"
-displayName="gs1"
+displayName="Goon Mod"
 displayURL="https://mcreator.net"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="william, MCreator"
+credits="William, MCreator"
+authors="William, MCreator"
+description="The Gooncraft Mod"
 
-[[dependencies.gs]]
+[[dependencies.gm]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"

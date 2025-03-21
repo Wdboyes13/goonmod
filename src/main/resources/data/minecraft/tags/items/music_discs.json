@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "gs:threesee",
-    "gs:execprog",
-    "gs:millpp"
+    "gm:threesee",
+    "gm:execprog",
+    "gm:millpp"
   ]
 }

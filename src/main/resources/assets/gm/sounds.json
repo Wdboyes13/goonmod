@@ -1,0 +1,26 @@
+{
+  "thc": {
+    "sounds": [
+      {
+        "name": "gm:spotidownloader.com_-__3c_-_kyotsugyon",
+        "stream": false
+      }
+    ]
+  },
+  "exepro": {
+    "sounds": [
+      {
+        "name": "gm:spotidownloader.com_-__execution_program.wav_-_lusumi",
+        "stream": false
+      }
+    ]
+  },
+  "millionpp": {
+    "sounds": [
+      {
+        "name": "gm:spotidownloader.com_-_m1lli0n_pp_-_camellia",
+        "stream": false
+      }
+    ]
+  }
+}
