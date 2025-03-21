@@ -46,5 +46,11 @@ axios.post(`https://api.curseforge.com/v1/mods/${projectId}/upload`, form, {
     console.log('Mod uploaded successfully', response.data);
   })
   .catch(error => {
-    console.error('Error uploading mod:', error.response ? error.response.data : error.message);
+    if (error.response) {
+      console.error('Error uploading mod:');
+      console.error('Status:', error.response.status);
+      console.error('Data:', error.response.data);
+    } else {
+      console.error('Error uploading mod:', error.message);
+    }
   });
