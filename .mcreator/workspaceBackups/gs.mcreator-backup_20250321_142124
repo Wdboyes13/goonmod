@@ -1,0 +1,67 @@
+{
+  "mod_elements": [
+    {
+      "name": "Goonsauce",
+      "type": "fluid",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goonsauce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/gs/item/GoonsauceItem.java",
+          "src/main/resources/assets/gs/models/item/goonsauce_bucket.json",
+          "src/main/java/net/mcreator/gs/fluid/types/GoonsauceFluidType.java",
+          "src/main/java/net/mcreator/gs/block/GoonsauceBlock.java",
+          "src/main/java/net/mcreator/gs/fluid/GoonsauceFluid.java",
+          "src/main/resources/assets/gs/models/block/goonsauce.json",
+          "src/main/resources/assets/gs/blockstates/goonsauce.json"
+        ]
+      }
+    },
+    {
+      "name": "Gsrec",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gsrec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/gs/recipes/gsrec.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.gs.goonsauce_bucket": "Goonsauce Bucket",
+      "block.gs.goonsauce": "Goon sauce",
+      "fluid.gs.goonsauce": "Goon sauce"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "gs",
+    "modName": "gs1",
+    "version": "1.0.0",
+    "author": "william, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.gs",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}

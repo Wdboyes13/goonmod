@@ -1,0 +1,24 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Threesee",
+    "rarity": "COMMON",
+    "texture": "threesee",
+    "description": ":3c by Kyotsugyon",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:thc"
+    },
+    "lengthInTicks": 4400,
+    "analogOutput": 0
+  }
+}

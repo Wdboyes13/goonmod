@@ -1,0 +1,156 @@
+{
+  "mod_elements": [
+    {
+      "name": "Goonsauce",
+      "type": "fluid",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goonsauce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/gs/item/GoonsauceItem.java",
+          "src/main/resources/assets/gs/models/item/goonsauce_bucket.json",
+          "src/main/java/net/mcreator/gs/fluid/types/GoonsauceFluidType.java",
+          "src/main/java/net/mcreator/gs/block/GoonsauceBlock.java",
+          "src/main/java/net/mcreator/gs/fluid/GoonsauceFluid.java",
+          "src/main/resources/assets/gs/models/block/goonsauce.json",
+          "src/main/resources/assets/gs/blockstates/goonsauce.json"
+        ]
+      }
+    },
+    {
+      "name": "Gsrec",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gsrec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/gs/recipes/gsrec.json"
+        ]
+      }
+    },
+    {
+      "name": "Gtflag",
+      "type": "painting",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gtflag",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Threesee",
+      "type": "musicdisc",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "threesee",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/gs/item/ThreeseeItem.java",
+          "src/main/resources/assets/gs/models/item/threesee.json"
+        ]
+      }
+    },
+    {
+      "name": "Execprog",
+      "type": "musicdisc",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execprog",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/gs/models/item/execprog.json",
+          "src/main/java/net/mcreator/gs/item/ExecprogItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Millpp",
+      "type": "musicdisc",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "millpp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/gs/models/item/millpp.json",
+          "src/main/java/net/mcreator/gs/item/MillppItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "thc",
+      "files": [
+        "spotidownloader.com_-__3c_-_kyotsugyon"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "exepro",
+      "files": [
+        "spotidownloader.com_-__execution_program.wav_-_lusumi"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "millionpp",
+      "files": [
+        "spotidownloader.com_-_m1lli0n_pp_-_camellia"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "painting.gs.gtflag.title": "gtflag",
+      "subtitles.thc": "",
+      "item.gs.millpp.desc": "M1LLI0N PP by Camellia",
+      "item.gs.threesee": "Threesee",
+      "item.gs.execprog.desc": "./Execution_Program.wav by Lusumi",
+      "item.gs.millpp": "Millpp",
+      "painting.gs.gtflag.author": "mr balls",
+      "item.gs.threesee.desc": ":3c by Kyotsugyon",
+      "item.gs.execprog": "Execprog",
+      "item.gs.goonsauce_bucket": "Goonsauce Bucket",
+      "block.gs.goonsauce": "Goon sauce",
+      "subtitles.exepro": "",
+      "fluid.gs.goonsauce": "Goon sauce",
+      "subtitles.millionpp": ""
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "gs",
+    "modName": "gs1",
+    "version": "1.0.0",
+    "author": "william, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.gs",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}

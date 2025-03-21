@@ -1,0 +1,45 @@
+{
+  "_fv": 57,
+  "_type": "fluid",
+  "definition": {
+    "name": "Goon sauce",
+    "bucketName": "Goonsauce Bucket",
+    "textureStill": "gsstill",
+    "textureFlowing": "gsflow",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 5,
+    "levelDecrease": 1,
+    "slopeFindDistance": 5,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "DRIPPING_HONEY"
+    },
+    "flowStrength": 1.0,
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1200,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "gsbucket",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "resistance": 100.0,
+    "luminance": 2,
+    "lightOpacity": 1,
+    "emissiveRendering": false,
+    "tickRate": 0,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT"
+  }
+}

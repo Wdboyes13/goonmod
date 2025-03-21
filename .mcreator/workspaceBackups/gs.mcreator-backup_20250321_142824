@@ -1,0 +1,108 @@
+{
+  "mod_elements": [
+    {
+      "name": "Goonsauce",
+      "type": "fluid",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goonsauce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/gs/item/GoonsauceItem.java",
+          "src/main/resources/assets/gs/models/item/goonsauce_bucket.json",
+          "src/main/java/net/mcreator/gs/fluid/types/GoonsauceFluidType.java",
+          "src/main/java/net/mcreator/gs/block/GoonsauceBlock.java",
+          "src/main/java/net/mcreator/gs/fluid/GoonsauceFluid.java",
+          "src/main/resources/assets/gs/models/block/goonsauce.json",
+          "src/main/resources/assets/gs/blockstates/goonsauce.json"
+        ]
+      }
+    },
+    {
+      "name": "Gsrec",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gsrec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/gs/recipes/gsrec.json"
+        ]
+      }
+    },
+    {
+      "name": "Gtflag",
+      "type": "painting",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gtflag",
+      "metadata": {
+        "files": []
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "thc",
+      "files": [
+        "spotidownloader.com_-__3c_-_kyotsugyon"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "exepro",
+      "files": [
+        "spotidownloader.com_-__execution_program.wav_-_lusumi"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "millionpp",
+      "files": [
+        "spotidownloader.com_-_m1lli0n_pp_-_camellia"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "painting.gs.gtflag.title": "gtflag",
+      "subtitles.thc": "",
+      "item.gs.goonsauce_bucket": "Goonsauce Bucket",
+      "block.gs.goonsauce": "Goon sauce",
+      "subtitles.exepro": "",
+      "fluid.gs.goonsauce": "Goon sauce",
+      "painting.gs.gtflag.author": "mr balls",
+      "subtitles.millionpp": ""
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "gs",
+    "modName": "gs1",
+    "version": "1.0.0",
+    "author": "william, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.gs",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}

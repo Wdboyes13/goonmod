@@ -1,0 +1,24 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Millpp",
+    "rarity": "COMMON",
+    "texture": "milpp",
+    "description": "M1LLI0N PP by Camellia",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:millionpp"
+    },
+    "lengthInTicks": 9200,
+    "analogOutput": 0
+  }
+}

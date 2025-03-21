@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "gtflag.png",
+    "width": 80,
+    "height": 48,
+    "title": "gtflag",
+    "author": "mr balls"
+  }
+}
