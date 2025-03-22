@@ -26,7 +26,7 @@ jobs:
       run: chmod +x gradlew  # Ensure gradlew is executable
 
     - name: Upload full project directory as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.6.2
       with:
         name: full-project
         path: |
@@ -38,7 +38,7 @@ jobs:
 
     steps:
     - name: Download full project artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.2.1
       with:
         name: full-project
 
@@ -56,7 +56,7 @@ jobs:
 
     steps:
     - name: Download full project artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.2.1
       with:
         name: full-project
 
