@@ -76,6 +76,10 @@ jobs:
     needs: Store
 
     steps:
+
+    - name: Checkout the code
+      uses: actions/checkout@v2
+      
     - name: Get the version tag dynamically
       id: get_version
       run: |
