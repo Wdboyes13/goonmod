@@ -140,7 +140,19 @@ Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/g
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/beforeDestroyingBlock(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V from net/minecraft/world/level/material/FlowingFluid/beforeDestroyingBlock(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V: beforeDestroyingBlock -> m_7456_
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/getBucket()Lnet/minecraft/world/item/Item; from net/minecraft/world/level/material/Fluid/getBucket()Lnet/minecraft/world/item/Item;: getBucket -> m_6859_
 Conflicting propagated mapping for net/minecraftforge/fluids/ForgeFlowingFluid/canBeReplacedWith(Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/Direction;)Z from net/minecraft/world/level/material/Fluid/canBeReplacedWith(Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/Direction;)Z: canBeReplacedWith -> m_5486_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid/getDripParticle()Lnet/minecraft/core/particles/ParticleOptions; from net/minecraft/world/level/material/Fluid/getDripParticle()Lnet/minecraft/core/particles/ParticleOptions;: getDripParticle -> m_7792_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid$Flowing/getAmount(Lnet/minecraft/world/level/material/FluidState;)I from net/minecraft/world/level/material/FlowingFluid/getAmount(Lnet/minecraft/world/level/material/FluidState;)I: getAmount -> m_7430_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid$Flowing/createFluidStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/material/FlowingFluid/createFluidStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createFluidStateDefinition -> m_7180_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid$Flowing/isSource(Lnet/minecraft/world/level/material/FluidState;)Z from net/minecraft/world/level/material/Fluid/isSource(Lnet/minecraft/world/level/material/FluidState;)Z: isSource -> m_7444_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid$Source/getAmount(Lnet/minecraft/world/level/material/FluidState;)I from net/minecraft/world/level/material/FlowingFluid/getAmount(Lnet/minecraft/world/level/material/FluidState;)I: getAmount -> m_7430_
+Conflicting propagated mapping for net/mcreator/gm/fluid/GoonsauceFluid$Source/isSource(Lnet/minecraft/world/level/material/FluidState;)Z from net/minecraft/world/level/material/Fluid/isSource(Lnet/minecraft/world/level/material/FluidState;)Z: isSource -> m_7444_
+Conflicting propagated mapping for net/mcreator/gm/item/BallsItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/gm/item/MillcadItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Conflicting propagated mapping for net/minecraftforge/event/BuildCreativeModeTabContentsEvent/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V from net/minecraft/world/item/CreativeModeTab$Output/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V: accept -> m_246267_
+Conflicting propagated mapping for net/mcreator/gm/item/MillppItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/gm/item/ExecprogItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/gm/item/ThreeseeItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/RecordItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/gm/item/GoonsauceItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Adding extras
 Sorting
 Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
@@ -159,6 +171,7 @@ Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
   assets/gm/models/custom/
   assets/gm/models/custom/execprog.mod.json
   assets/gm/models/item/
+  assets/gm/models/item/balls.json
   assets/gm/models/item/execprog.json
   assets/gm/models/item/goonsauce_bucket.json
   assets/gm/models/item/millcad.json
@@ -176,6 +189,7 @@ Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
   assets/gm/textures/block/gsstill.png
   assets/gm/textures/gtflag.png
   assets/gm/textures/item/
+  assets/gm/textures/item/ballstext.png
   assets/gm/textures/item/execprog.png
   assets/gm/textures/item/gsbucket.png
   assets/gm/textures/item/gtflag.png
@@ -218,6 +232,7 @@ Writing Output: /Users/william/MCreatorWorkspaces/gs/build/reobfJar/output.jar
   net/mcreator/gm/init/GmModSounds.class
   net/mcreator/gm/init/GmModTabs.class
   net/mcreator/gm/item/
+  net/mcreator/gm/item/BallsItem.class
   net/mcreator/gm/item/ExecprogItem.class
   net/mcreator/gm/item/GoonsauceItem.class
   net/mcreator/gm/item/MillcadItem.class

@@ -111,6 +111,33 @@
           "src/main/resources/data/gm/recipes/millcadrec.json"
         ]
       }
+    },
+    {
+      "name": "Balls",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balls",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/gm/item/BallsItem.java",
+          "src/main/resources/assets/gm/models/item/balls.json"
+        ]
+      }
+    },
+    {
+      "name": "Ballsrec",
+      "type": "recipe",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballsrec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/gm/recipes/ballsrec.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -168,6 +195,7 @@
       "subtitles.exepro": "",
       "item.gm.goonsauce_bucket": "Goonsauce Bucket",
       "fluid.gs.goonsauce": "Goon sauce",
+      "item.gm.balls": "balls",
       "item.gm.millpp.desc": "M1LLI0N PP by Camellia"
     }
   },

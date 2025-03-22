@@ -15,6 +15,7 @@ import net.mcreator.gm.item.MillppItem;
 import net.mcreator.gm.item.MillcadItem;
 import net.mcreator.gm.item.GoonsauceItem;
 import net.mcreator.gm.item.ExecprogItem;
+import net.mcreator.gm.item.BallsItem;
 import net.mcreator.gm.GmMod;
 
 public class GmModItems {
@@ -24,4 +25,5 @@ public class GmModItems {
 	public static final RegistryObject<Item> EXECPROG = REGISTRY.register("execprog", () -> new ExecprogItem());
 	public static final RegistryObject<Item> MILLPP = REGISTRY.register("millpp", () -> new MillppItem());
 	public static final RegistryObject<Item> MILLCAD = REGISTRY.register("millcad", () -> new MillcadItem());
+	public static final RegistryObject<Item> BALLS = REGISTRY.register("balls", () -> new BallsItem());
 }

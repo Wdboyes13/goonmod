@@ -12,31 +12,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
         "value": "Items.BONE"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       },
       {
-        "value": "Items.MILK_BUCKET"
+        "value": "Items.WATER_BUCKET"
       }
     ],
     "recipeReturnStack": {
