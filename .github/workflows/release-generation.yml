@@ -44,8 +44,8 @@ jobs:
         echo "version=$VERSION" >> $GITHUB_ENV  # Set the version as an environment variable
     
     - name: Create a GitHub release
-      run: |
-        env:
-          GH_TOKEN: ${{ secrets.GIT_TOKEN }}  # Provide authentication token for GitHub API
+      run: |  # Provide authentication token for GitHub API
         gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
+      env:
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
     
