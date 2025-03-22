@@ -11,51 +11,55 @@ jobs:
 
     steps:
     - name: Checkout the code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2  # Checkout repository to ensure all files are available
 
     - name: Setup Java JDK
       uses: actions/setup-java@v4.7.0
       with:
-        java-version: 17  # Specify the version of Java (17 in your case)
-        distribution: 'zulu'  # Specify the distribution, e.g., AdoptOpenJDK or zulu
-        java-package: 'jdk'  # You can specify 'jdk' to get the full JDK package, or 'jre' if you want just the JRE
-        architecture: 'x64'  # Specify the architecture, default is x64
-        check-latest: true  # Optionally, check for the latest available version if you want
-        
-    - name: Upload gradlew and other necessary files as artifact
-      id: upload-artifact
-      uses: actions/upload-artifact@v4.6.2
+        java-version: 17
+        distribution: 'zulu'
+        java-package: 'jdk'
+        architecture: 'x64'
+        check-latest: true
+
+    - name: Make gradlew executable
+      run: chmod +x gradlew  # Ensure gradlew is executable
+
+    - name: Upload full project directory as artifact
+      uses: actions/upload-artifact@v2
       with:
-        name: gradle-setup
-        path: .
+        name: full-project
+        path: |
+          .  # Upload the entire directory, including .git, gradle wrapper, and all project files
+
   Build:
     runs-on: ubuntu-latest
-    needs: Setup
-    steps:
-    
-    - name: Download gradle setup artifact
-      uses: actions/download-artifact@v4.2.1
-      with:
-        name: gradle-setup
-        
+    needs: Setup  # Ensure this job runs after Setup
 
-        
+    steps:
+    - name: Download full project artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: full-project
+
+    - name: Make gradlew executable
+      run: chmod +x gradlew  # Ensure gradlew is executable
+
     - name: Build the mod
       run: |
-        chmod +x gradlew
-        # Assuming you are using a build tool like Gradle or Maven
-        # Replace with the actual build command for your project
-        ./gradlew build  # Replace this with your build command if different
+        ./gradlew build  # Build using the gradle wrapper
         echo "Mod built"
 
   Store-and-release:
     runs-on: ubuntu-latest
-    needs: Build
-    steps:
+    needs: Build  # Ensure this job runs after Build
 
-    - name: Checkout the code
-      uses: actions/checkout@v2  
-    
+    steps:
+    - name: Download full project artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: full-project
+
     - name: Store the mod in releases/curr/gsm.jar
       run: |
         mkdir -p releases/curr
@@ -69,8 +73,7 @@ jobs:
         echo "version=$VERSION" >> $GITHUB_ENV  # Set the version as an environment variable
     
     - name: Create a GitHub release
-      run: |  # Provide authentication token for GitHub API
+      run: |
         gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
       env:
         GH_TOKEN: ${{ secrets.GIT_TOKEN }}
-    
