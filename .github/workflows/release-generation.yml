@@ -30,7 +30,8 @@ jobs:
       with:
         name: full-project
         path: |
-          .  # Upload the entire directory, including .git, gradle wrapper, and all project files
+          path: |
+          **/*
 
   Build:
     runs-on: ubuntu-latest
