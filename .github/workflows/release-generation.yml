@@ -21,10 +21,7 @@ jobs:
         java-package: 'jdk'  # You can specify 'jdk' to get the full JDK package, or 'jre' if you want just the JRE
         architecture: 'x64'  # Specify the architecture, default is x64
         check-latest: true  # Optionally, check for the latest available version if you want
-
-    - name: Make gradlew executable
-      run: chmod +x gradlew
-    
+        
     - name: Upload gradlew and other necessary files as artifact
       id: upload-artifact
       uses: actions/upload-artifact@v4.6.2
@@ -47,6 +44,7 @@ jobs:
         
     - name: Build the mod
       run: |
+        chmod +x gradlew
         # Assuming you are using a build tool like Gradle or Maven
         # Replace with the actual build command for your project
         ./gradlew build  # Replace this with your build command if different
