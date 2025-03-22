@@ -16,4 +16,4 @@ jobs:
 
     - name: Upload the mod to CurseForge
       run: |
-        curl -L -v -X POST -H "X-Api-Token: ${{ secrets.CURSEFORGE_API_TOKEN }}" -F "metadata={\"changelog\":\"${{ github.event.release.body }}\",\"changelogType\":\"markdown\",\"displayName\":\"${{ github.event.release.name }}\",\"releaseType\":\"alpha\",\"gameVersions\":[157, 158],\"isMarkedForManualRelease\":true}" -F "file=@releases/curr/gsm.jar" http://api.curseforge.com/v1/projects/1225110/upload-file
+        curl -L -v -X POST -H "X-Api-Token: 5fee90ef-5579-49ef-9177-7e62fa79d333" -F "metadata={\"changelog\":\"Initial release\",\"changelogType\":\"markdown\",\"displayName\":\"Goon Mod \",\"releaseType\":\"alpha\",\"gameVersions\":[9990],\"isMarkedForManualRelease\":true}" -F "file=@releases/curr/gsm.jar" http://www.curseforge.com/api/projects/1225110/upload-file
