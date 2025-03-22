@@ -22,10 +22,26 @@ jobs:
         architecture: 'x64'  # Specify the architecture, default is x64
         check-latest: true  # Optionally, check for the latest available version if you want
 
+    - name: Upload gradlew and other necessary files as artifact
+      id: upload-artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: gradle-setup
+        path: .
+
+        
+
   Build:
     runs-on: ubuntu-latest
-
+    needs: Setup
     steps:
+    
+    - name: Download gradle setup artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: gradle-setup
+
+        
     - name: Build the mod
       run: |
         # Assuming you are using a build tool like Gradle or Maven
