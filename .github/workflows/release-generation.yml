@@ -45,8 +45,6 @@ jobs:
     
     - name: Create a GitHub release
       run: |
-        git tag -a ${{ env.version }} -m "Release ${{ env.version }}"  # Use the dynamically determined version tag
-        git push origin ${{ env.version }}  # Push the tag to GitHub
         gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}  # Provide authentication token for GitHub API
