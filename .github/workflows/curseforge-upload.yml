@@ -16,8 +16,4 @@ jobs:
 
     - name: Upload the mod to CurseForge
       run: |
-        curl -L -v -X POST \
-          -H "X-Api-Token: ${{ secrets.CURSEFORGE_API_TOKEN }}" \  # Use GitHub Secrets for API token
-          -F "metadata={\"changelog\":\"${{ github.event.release.body }}\",\"changelogType\":\"markdown\",\"displayName\":\"${{ github.event.release.name }}\",\"releaseType\":\"alpha\",\"gameVersions\":[157, 158],\"isMarkedForManualRelease\":true}" \
-          -F "file=@releases/curr/gsm.jar" \  # Adjust this path according to where your mod is
-          https://api.curseforge.com/v1/projects/1225110/upload-file
+        curl -L -v -X POST -H "X-Api-Token: ${{ secrets.CURSEFORGE_API_TOKEN }}" -F "metadata={\"changelog\":\"${{ github.event.release.body }}\",\"changelogType\":\"markdown\",\"displayName\":\"${{ github.event.release.name }}\",\"releaseType\":\"alpha\",\"gameVersions\":[157, 158],\"isMarkedForManualRelease\":true}" -F "file=@releases/curr/gsm.jar" https://api.curseforge.com/v1/projects/1225110/upload-file
