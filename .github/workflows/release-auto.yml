@@ -49,7 +49,7 @@ jobs:
         ./gradlew build  # Build using the gradle wrapper
         echo "Mod built"
 
-  Store-and-release:
+  Store:
     runs-on: ubuntu-latest
     needs: Build  # Ensure this job runs after Build
   
@@ -71,7 +71,11 @@ jobs:
         mkdir -p releases/curr
         LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
         cp "$LATEST_MOD" releases/curr/gsm.jar
-  
+  Release:   
+    runs-on: ubuntu-latest
+    needs: Store
+
+    steps:
     - name: Get the version tag dynamically
       id: get_version
       run: |
@@ -83,4 +87,24 @@ jobs:
         gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
       env:
         GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+  Upload-to-curseforge:
+    runs-on: ubuntu-latest
+    needs: Store
+
+    steps: 
+
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+      
+    - name: Get the version tag dynamically
+      id: get_version
+      run: |
+        VERSION=$(git tag --sort=-v:refname | head -n 1)  # Get the most recent tag from remote
+        echo "version=$VERSION" >> $GITHUB_ENV  # Set the version as an environment variable
+
+    - name: Upload to curseforge
+      run: |
+        curl -L -v -X POST -H "X-Api-Token: 5fee90ef-5579-49ef-9177-7e62fa79d333" -F "metadata={\"changelog\":\"Initial release\",\"changelogType\":\"markdown\",\"displayName\":\"Goon Mod \",\"releaseType\":\"alpha\",\"gameVersions\":[9990],\"isMarkedForManualRelease\":true}" -F "file=@releases/curr/gsm.jar" http://www.curseforge.com/api/projects/1225110/upload-file
+    
 
