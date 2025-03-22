@@ -1,6 +1,7 @@
 name: Upload Mod to CurseForge on Release Publish
 
 on:
+  workflow_dispatch:
   release:
     types:
       - published  # Triggered when a release is published
