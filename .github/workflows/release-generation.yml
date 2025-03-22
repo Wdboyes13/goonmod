@@ -35,6 +35,11 @@ jobs:
         mkdir -p releases/curr
         LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
         cp "$LATEST_MOD" releases/curr/gsm.jar
+        git add releases/curr/gsm.jar  # Add the new file
+        git commit -m "Add build artifact gsm.jar"
+        git push origin HEAD:main
+      env: 
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
 
 
     - name: Get the version tag dynamically
