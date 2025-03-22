@@ -32,16 +32,9 @@ jobs:
 
     - name: Store the mod in releases/curr/gsm.jar
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git
         mkdir -p releases/curr
         LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
         cp "$LATEST_MOD" releases/curr/gsm.jar
-        git add releases/curr/gsm.jar  # Add the new file
-        git commit -m "Add build artifact gsm.jar"
-        git push origin HEAD:main
-
 
     - name: Get the version tag dynamically
       id: get_version
