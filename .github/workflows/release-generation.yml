@@ -32,14 +32,9 @@ jobs:
 
     - name: Store the mod in releases/curr/gsm.jar
       run: |
-    # Ensure the build artifact is placed in the correct directory
-          mkdir -p releases/curr
-    
-    # Find the mod with the highest version (assuming modid-<version>.jar format)
-          LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
-
-    # Copy the latest mod to the desired location
-          cp "$LATEST_MOD" releases/curr/gsm.jar
+        mkdir -p releases/curr
+        LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
+        cp "$LATEST_MOD" releases/curr/gsm.jar
 
 
     - name: Create a GitHub release
