@@ -19,4 +19,4 @@ jobs:
           -H "X-Api-Token: ${{ secrets.CURSEFORGE_API_TOKEN }}" \  # Use GitHub Secrets for API token
           -F "metadata={\"changelog\":\"${{ github.event.release.body }}\",\"changelogType\":\"markdown\",\"displayName\":\"${{ github.event.release.name }}\",\"releaseType\":\"alpha\",\"gameVersions\":[157, 158],\"isMarkedForManualRelease\":true}" \
           -F "file=@releases/curr/gsm.jar" \  # Adjust this path according to where your mod is
-          http://www.curseforge.com/api/projects/1225110/upload-file
+          https://api.curseforge.com/v1/projects/1225110/upload-file
