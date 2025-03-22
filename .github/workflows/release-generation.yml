@@ -45,7 +45,7 @@ jobs:
     
     - name: Create a GitHub release
       run: |
-        gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
         env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}  # Provide authentication token for GitHub API
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}  # Provide authentication token for GitHub API
+        gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
     
