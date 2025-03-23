@@ -66,23 +66,3 @@ jobs:
           body: "Release notes for version ${{ env.VERSION }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-
-  Upload-to-curseforge:
-    runs-on: ubuntu-latest
-    needs: Build
-    steps:
-      - name: Download built mod
-        uses: actions/download-artifact@v4
-        with:
-          name: built-mod
-
-      - name: Get latest version tag
-        id: get_version
-        run: echo "VERSION=$(git tag --sort=-v:refname | head -n 1)" >> $GITHUB_ENV
-
-      - name: Upload to CurseForge
-        run: |
-          curl -L -X POST -H "X-Api-Token: ${{ secrets.CURSE_TOKEN }}" \
-          -F "metadata={\"changelog\":\"Initial release\",\"changelogType\":\"markdown\",\"displayName\":\"Goon Mod ${{ env.VERSION }}\",\"releaseType\":\"alpha\",\"gameVersions\":[9990],\"isMarkedForManualRelease\":true}" \
-          -F "file=@*.jar" \
-          http://www.curseforge.com/api/projects/1225110/upload-file
