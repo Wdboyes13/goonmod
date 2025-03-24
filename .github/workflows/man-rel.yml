@@ -1,0 +1,39 @@
+name: Manually triggered generate release
+
+on:
+  - workflow_dispatch 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v2
+
+    - name: Store the mod in releases/curr/gsm.jar
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        mkdir -p releases/curr
+        LATEST_MOD=$(ls build/libs/modid-*.jar | sort -V | tail -n 1)
+        cp "$LATEST_MOD" releases/curr/gsm.jar
+        git add releases/curr/gsm.jar  # Add the new file
+        git commit -m "Add build artifact gsm.jar"
+        git push origin HEAD:main
+      env: 
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+
+    - name: Get the version tag dynamically
+      id: get_version
+      run: |
+        VERSION=$(git describe --tags --abbrev=0)  # Get the most recent tag
+        echo "version=$VERSION" >> $GITHUB_ENV  # Set the version as an environment variable
+    
+    - name: Create a GitHub release
+      run: |  # Provide authentication token for GitHub API
+        gh release create ${{ env.version }} releases/curr/gsm.jar --title "Release ${{ env.version }}" --notes "Release notes for ${{ env.version }} go here."
+      env:
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
