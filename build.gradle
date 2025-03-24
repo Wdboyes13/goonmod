@@ -5,7 +5,7 @@ plugins {
 
 version = '1.0'
 group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+archivesBaseName = 'gsm'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
