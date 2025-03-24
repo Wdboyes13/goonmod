@@ -8,7 +8,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.gm.item.ThreeseeItem;
 import net.mcreator.gm.item.MillppItem;
@@ -26,4 +28,9 @@ public class GmModItems {
 	public static final RegistryObject<Item> MILLPP = REGISTRY.register("millpp", () -> new MillppItem());
 	public static final RegistryObject<Item> MILLCAD = REGISTRY.register("millcad", () -> new MillcadItem());
 	public static final RegistryObject<Item> BALLS = REGISTRY.register("balls", () -> new BallsItem());
+	public static final RegistryObject<Item> DICK = block(GmModBlocks.DICK);
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 }

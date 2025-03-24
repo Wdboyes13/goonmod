@@ -1,0 +1,24 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Execprog",
+    "rarity": "COMMON",
+    "texture": "execprog",
+    "description": "./Execution_Program.wav by Lusumi",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:executionprogram"
+    },
+    "lengthInTicks": 3600,
+    "analogOutput": 0
+  }
+}

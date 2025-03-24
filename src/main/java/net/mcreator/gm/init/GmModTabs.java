@@ -25,5 +25,9 @@ public class GmModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(GmModItems.GOONSAUCE_BUCKET.get());
 		}
+
+		if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+			tabData.accept(GmModBlocks.DICK.get().asItem());
+		}
 	}
 }

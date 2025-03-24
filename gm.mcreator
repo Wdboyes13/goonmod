@@ -138,6 +138,22 @@
           "src/main/resources/data/gm/recipes/ballsrec.json"
         ]
       }
+    },
+    {
+      "name": "Dick",
+      "type": "plant",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dick",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/gm/models/item/dick.json",
+          "src/main/resources/assets/gm/models/block/dick.json",
+          "src/main/java/net/mcreator/gm/block/DickBlock.java",
+          "src/main/resources/assets/gm/blockstates/dick.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -170,9 +186,10 @@
   "language_map": {
     "en_us": {
       "item.gm.threesee": "Threesee",
+      "block.gm.dick": "Dick",
       "subtitles.thc": "",
-      "block.gm.goonsauce": "Goon sauce",
       "item.gs.threesee": "Threesee",
+      "block.gm.goonsauce": "Goon sauce",
       "item.gs.execprog.desc": "./Execution_Program.wav by Lusumi",
       "item.gm.millpp": "Millpp",
       "item.gs.millpp": "Millpp",

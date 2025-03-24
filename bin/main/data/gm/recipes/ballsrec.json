@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "gm:goonsauce_bucket"
+    },
+    "b": {
+      "item": "gm:millcad"
+    }
+  },
+  "result": {
+    "item": "gm:balls",
+    "count": 1
+  }
+}

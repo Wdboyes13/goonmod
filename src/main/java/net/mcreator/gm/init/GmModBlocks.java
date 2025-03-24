@@ -11,9 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.gm.block.GoonsauceBlock;
+import net.mcreator.gm.block.DickBlock;
 import net.mcreator.gm.GmMod;
 
 public class GmModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, GmMod.MODID);
 	public static final RegistryObject<Block> GOONSAUCE = REGISTRY.register("goonsauce", () -> new GoonsauceBlock());
+	public static final RegistryObject<Block> DICK = REGISTRY.register("dick", () -> new DickBlock());
 }
